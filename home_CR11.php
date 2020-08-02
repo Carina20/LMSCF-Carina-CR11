@@ -60,6 +60,63 @@ echo '<img src="data:blob;base64,'.base64_encode( $row['image'] ).'">';
 
 ?>
 
+<div class="container-fluid" id="main_home">
+
+  <div class="container">
+
+    <div class="card-deck" id="card-deck">
+
+      <div class="card">
+              
+          <img class="card-img-top" src="img_CR11/cat_white.jpg" width=50% height="50%">
+                
+          <div class="card-body">
+                  
+            <h5 class="card-title"> animal 1 </h5>
+
+            <p class="card-text"> animal 1 description animal 1 description animal 1 description animal 1 description</p>
+
+            </div>
+  
+          </div>
+
+          <div class="card">
+              
+          <img class="card-img-top" src="img_CR11/lion.jpeg" width=50% height="50%">
+                
+          <div class="card-body">
+                  
+            <h5 class="card-title"> animal 2 </h5>
+
+            <p class="card-text"> animal 2 description animal 2 description animal 2 description animal 2 description</p>
+
+            </div>
+  
+          </div>
+
+          <div class="card">
+              
+          <img class="card-img-top" src="img_CR11/parrot.jpg" width=50% height="50%">
+                
+          <div class="card-body">
+                  
+            <h5 class="card-title"> animal 3</h5>
+
+            <p class="card-text"> animal 3 description animal 3 description animal 3 description animal 3 description </p>
+
+            </div>
+  
+          </div>
+
+        </div>
+
+  </div>
+
+</div>
+
+
+
+
  <footer>
 
   <div id="footer_div1">

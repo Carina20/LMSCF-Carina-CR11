@@ -1,0 +1,40 @@
+.header_hero {
+	height: 100px;
+	background-color:rgb(51,204,51);
+}
+
+.hero_text {
+	text-align: center;
+	font-size:44pt;
+	color: white;
+}
+
+nav {
+	background-color: rgb(255,255,204);
+}
+
+#navbarDropdown {
+	color: black;
+}
+
+#home {
+	color: black;
+}
+
+#footer_div1 {
+	background-color: rgb(255,255,204);
+	height:50px;
+}
+
+#footer_div2 {
+	background-color: rgb(51,204,51);
+	height:70px;
+}
+
+.footer_logo {
+	color: black;
+	font-size:12pt;
+	font-weight: bold;
+	text-align: center;
+	padding-top:20px;
+}

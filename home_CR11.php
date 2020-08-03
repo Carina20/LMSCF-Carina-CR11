@@ -48,22 +48,27 @@
 
     <div class="card-deck">
 
+      <div class="row">
+      
+
     
   <?php
 
       $db = mysqli_connect("localhost","root","","cr11_carina_petadoption"); 
-      $sql = "SELECT image,name, description FROM animal";
+      $sql = "SELECT image, name, description FROM animal";
       $result = $db->query($sql);
       while ($row=mysqli_fetch_assoc($result)) {
 
-      echo '<div class="card">
-      <img class="card-img-top images" src="data:blob;base64,'.base64_encode( $row['image'] ).' ">
+      echo ' <div class="col-md-5 col-lg-5">
+      <div class="card">
+      <img class="card-img-top" src="data:blob;base64,'.base64_encode( $row['image'] ).' ">
       <div class="card-body card_body">
                   
             <h5 class="card-title">'; printf ("<b> %s </b>", $row["name"]); echo '</h5>
 
         <p class="card-text">'; printf ($row["description"]); echo '</p>
         
+      </div>
          </div>
          </div>';
     
@@ -71,7 +76,8 @@
 
     ?>
 
-      </div> <!--------------  end of container -------------------------->
+    </div>
+      </div> <!--------------  end of card-deck -------------------------->
      </div>   <!--------------  end of container -------------------------->
 
      

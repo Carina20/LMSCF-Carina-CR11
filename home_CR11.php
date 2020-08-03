@@ -55,7 +55,7 @@
   <?php
 
       $db = mysqli_connect("localhost","root","","cr11_carina_petadoption"); 
-      $sql = "SELECT image, name, description, hobbies FROM animal";
+      $sql = "SELECT image, name, description, age, hobbies FROM animal";
       $result = $db->query($sql);
       while ($row=mysqli_fetch_assoc($result)) {
 
@@ -68,6 +68,7 @@
             <h5 class="card-title">'; printf ("<b> %s </b>", $row["name"]); echo '</h5>
 
         <p class="card-text">'; printf ($row["description"]); echo '</p>
+        <p class="card-text">'; printf ("Age: %s", $row["age"]); echo '</p>
         <p class="card-text">'; printf ("Hobbies: %s", $row["hobbies"]); echo '</p>
         
       </div>

@@ -22,6 +22,9 @@ nav {
 	color: green;
 }
 
+.card-deck {
+	border-visibility: hide;
+}
 
 .card-img-top {
 	width: 150px;

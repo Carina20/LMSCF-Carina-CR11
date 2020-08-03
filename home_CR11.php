@@ -61,7 +61,7 @@
 
 
       echo ' <div class="col-xs-8 col-sm-10 col-md-6 col-lg-6">
-      <div class="card">
+      <div class="card border-light">
       <img class="card-img-top" src="data:longblob;base64,'.base64_encode( $row['image'] ).' ">
       <div class="card-body card_body">
                   

@@ -55,18 +55,20 @@
   <?php
 
       $db = mysqli_connect("localhost","root","","cr11_carina_petadoption"); 
-      $sql = "SELECT image, name, description FROM animal";
+      $sql = "SELECT image, name, description, hobbies FROM animal";
       $result = $db->query($sql);
       while ($row=mysqli_fetch_assoc($result)) {
 
-      echo ' <div class="col-md-5 col-lg-5">
+
+      echo ' <div class="col-xs-8 col-sm-10 col-md-6 col-lg-6">
       <div class="card">
-      <img class="card-img-top" src="data:blob;base64,'.base64_encode( $row['image'] ).' ">
+      <img class="card-img-top top" src="data:longblob;base64,'.base64_encode( $row['image'] ).' ">
       <div class="card-body card_body">
                   
             <h5 class="card-title">'; printf ("<b> %s </b>", $row["name"]); echo '</h5>
 
         <p class="card-text">'; printf ($row["description"]); echo '</p>
+        <p class="card-text">'; printf ("Hobbies: %s", $row["hobbies"]); echo '</p>
         
       </div>
          </div>

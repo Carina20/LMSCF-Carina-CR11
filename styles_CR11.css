@@ -27,6 +27,10 @@ nav {
 	height: 400px;
 }
 
+#main_row {
+	justify-content: center
+}
+
 
 h5 {
 	color: green;

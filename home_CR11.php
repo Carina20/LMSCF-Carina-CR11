@@ -10,7 +10,9 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 	<title>Adopt a pet</title>
 </head>
+
 <body>
+
 <header>
 		<div class="header_hero">
 			<div class="hero_text"> All our animals </div>
@@ -42,16 +44,11 @@
 
 
 
-<div class="container-fluid" id="main_home">
-
   <div class="container">
 
-    <div class="card-deck" id="card-deck">
+    <div class="card-deck">
 
-      <div class="card">
-
-   
-
+    
   <?php
 
       $db = mysqli_connect("localhost","root","","cr11_carina_petadoption"); 
@@ -59,25 +56,24 @@
       $result = $db->query($sql);
       while ($row=mysqli_fetch_assoc($result)) {
 
-      echo '<img class="card-img-top" src="data:blob;base64,'.base64_encode( $row['image'] ).'"width=50% height="50%">';
-       echo '<div class="card-body">
+      echo '<div class="card">
+      <img class="card-img-top images" src="data:blob;base64,'.base64_encode( $row['image'] ).' ">
+      <div class="card-body card_body">
                   
-            <h5 class="card-title">'; printf (" %s ", $row["name"]); echo '</h5>';
+            <h5 class="card-title">'; printf ("<b> %s </b>", $row["name"]); echo '</h5>
 
-        echo '<p class="card-text">'; printf ($row["description"]); echo '</p>';
-        echo '
-         </div>
+        <p class="card-text">'; printf ($row["description"]); echo '</p>
+        
          </div>
          </div>';
     
-    }
+      }
 
     ?>
 
-      </div>   <!--------------  end of card -------------------------->
-      </div>   <!--------------  end of card-deck -------------------------->
+      </div> <!--------------  end of container -------------------------->
      </div>   <!--------------  end of container -------------------------->
-     </div>  <!--------------  end of container-fluid-------------------------->
+
      
 
  <footer>

@@ -62,14 +62,14 @@
 
       echo ' <div class="col-xs-8 col-sm-10 col-md-6 col-lg-6">
       <div class="card">
-      <img class="card-img-top top" src="data:longblob;base64,'.base64_encode( $row['image'] ).' ">
+      <img class="card-img-top" src="data:longblob;base64,'.base64_encode( $row['image'] ).' ">
       <div class="card-body card_body">
                   
             <h5 class="card-title">'; printf ("<b> %s </b>", $row["name"]); echo '</h5>
 
         <p class="card-text">'; printf ($row["description"]); echo '</p>
-        <p class="card-text">'; printf ("Age: %s", $row["age"]); echo '</p>
-        <p class="card-text">'; printf ("Hobbies: %s", $row["hobbies"]); echo '</p>
+        <p class="card-text age">'; printf ("<span style='color: green;'>Age:</span> %s", $row["age"]); echo '</p>
+        <p class="card-text hobbies">'; printf ("<span style='color: green;'> Hobbies:</span> %s", $row["hobbies"]); echo '</p>
         
       </div>
          </div>

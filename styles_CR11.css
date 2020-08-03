@@ -22,10 +22,16 @@ nav {
 	color: green;
 }
 
-.card img {
-	width: 350px;
-	height: 400px;
+
+.card-img-top {
+	width: 150px;
+	height: 300px;
 }
+
+.card img {
+	width: 70%;
+}
+
 
 #main_row {
 	justify-content: center

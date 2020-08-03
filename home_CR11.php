@@ -42,24 +42,6 @@
 
 
 
-
-
-
-<?php
-
-$db = mysqli_connect("localhost","root","","cr11_carina_petadoption"); 
-$sql = "SELECT image FROM animal";
-$result = $db->query($sql);
-while ($row=mysqli_fetch_assoc($result)) {
-
-echo '<img src="data:blob;base64,'.base64_encode( $row['image'] ).'">';
-
-}
-
-
-
-?>
-
 <div class="container-fluid" id="main_home">
 
   <div class="container">
@@ -67,55 +49,36 @@ echo '<img src="data:blob;base64,'.base64_encode( $row['image'] ).'">';
     <div class="card-deck" id="card-deck">
 
       <div class="card">
-              
-          <img class="card-img-top" src="img_CR11/cat_white.jpg" width=50% height="50%">
-                
-          <div class="card-body">
+
+   
+
+  <?php
+
+      $db = mysqli_connect("localhost","root","","cr11_carina_petadoption"); 
+      $sql = "SELECT image,name, description FROM animal";
+      $result = $db->query($sql);
+      while ($row=mysqli_fetch_assoc($result)) {
+
+      echo '<img class="card-img-top" src="data:blob;base64,'.base64_encode( $row['image'] ).'"width=50% height="50%">';
+       echo '<div class="card-body">
                   
-            <h5 class="card-title"> animal 1 </h5>
+            <h5 class="card-title">'; printf (" %s ", $row["name"]); echo '</h5>';
 
-            <p class="card-text"> animal 1 description animal 1 description animal 1 description animal 1 description</p>
+        echo '<p class="card-text">'; printf ($row["description"]); echo '</p>';
+        echo '
+         </div>
+         </div>
+         </div>';
+    
+    }
 
-            </div>
-  
-          </div>
+    ?>
 
-          <div class="card">
-              
-          <img class="card-img-top" src="img_CR11/lion.jpeg" width=50% height="50%">
-                
-          <div class="card-body">
-                  
-            <h5 class="card-title"> animal 2 </h5>
-
-            <p class="card-text"> animal 2 description animal 2 description animal 2 description animal 2 description</p>
-
-            </div>
-  
-          </div>
-
-          <div class="card">
-              
-          <img class="card-img-top" src="img_CR11/parrot.jpg" width=50% height="50%">
-                
-          <div class="card-body">
-                  
-            <h5 class="card-title"> animal 3</h5>
-
-            <p class="card-text"> animal 3 description animal 3 description animal 3 description animal 3 description </p>
-
-            </div>
-  
-          </div>
-
-        </div>
-
-  </div>
-
-</div>
-
-
-
+      </div>   <!--------------  end of card -------------------------->
+      </div>   <!--------------  end of card-deck -------------------------->
+     </div>   <!--------------  end of container -------------------------->
+     </div>  <!--------------  end of container-fluid-------------------------->
+     
 
  <footer>
 

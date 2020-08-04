@@ -15,7 +15,7 @@
 
 <header>
 		<div class="header_hero">
-			<div class="hero_text"> All our animals </div>
+			<div class="hero_text"> Find us </div>
 		</div>
 
 	<nav class="navbar navbar-expand navbar-light">
@@ -47,50 +47,42 @@
 
 	</header>
 
-<main>
+  <main>
 
   <div class="container">
 
-    <div class="card-deck">
 
-      <div class="row" id="main_row">
-      
+<h1 id="h1_addresses"> Adress list </h1>
 
-    
-  <?php
+<div id="adress_list">
+
+<div class="row_adresses">
+
+     <?php
 
       $db = mysqli_connect("localhost","root","","cr11_carina_petadoption"); 
-      $sql = "SELECT image, name, description, age, hobbies, city FROM animal
+      $sql = "SELECT name, address, zip_code, city FROM animal
       INNER JOIN location on fk_location_id = location_id";
       $result = $db->query($sql);
       while ($row=mysqli_fetch_assoc($result)) {
 
 
-      echo ' <div class="col-xs-8 col-sm-10 col-md-6 col-lg-6">
-      <div class="card border-light">
-      <img class="card-img-top" src="data:longblob;base64,'.base64_encode( $row['image'] ).' ">
-      <div class="card-body card_body">
-                  
-            <h5 class="card-title">'; printf ("<b> %s </b>", $row["name"]); echo '</h5>
 
-        <p class="card-text">'; printf ($row["description"]); echo '</p>
-        <p class="card-text age">'; printf ("<span style='color: green;'>Age:</span> %s", $row["age"]); echo '</p>
-        <p class="card-text hobbies">'; printf ("<span style='color: green;'> Hobbies:</span> %s", $row["hobbies"]); echo '</p>
-        <p class="card-text location">'; printf ("<span style='color: green;'> Location:</span> %s", $row["city"]); echo '</p>
-      </div>
-         </div>
-         </div>';
-    
-      }
+        printf(" <b><span style='color: green;'> %s </span></b>  %s | %s | %s <br>", 
+                     $row["name"], $row["address"], $row["zip_code"], $row["city"]);
+ }
 
-    ?>
 
-    </div> <!--------------  end of main_row -------------------------->
-      </div> <!--------------  end of card-deck -------------------------->
-     </div>   <!--------------  end of container -------------------------->
 
-     
-</main>
+?>
+
+</div>
+
+</div>
+
+</div>
+
+  </main>
 
  <footer>
 
@@ -107,4 +99,7 @@
 
 
 </body>
+
+<!-- "SELECT image, name, description, age, hobbies, city FROM animal
+      INNER JOIN location on fk_location_id = location_id"; -->
 </html>

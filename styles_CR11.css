@@ -11,7 +11,6 @@
 
 nav {
 	background-color: rgb(255,255,204);
-
 }
 
 #navbarDropdown {
@@ -22,14 +21,15 @@ nav {
 	color: green;
 }
 
+
 main {
 	background-color: rgb(255,255,171);
 }
 
 .container {
 	background: rgb(255,255,171);
-	margin-left: 0px;
-	margin-right: 0px;
+	padding-top: 40px;
+	padding-bottom: 30px;
 }
 
 .card-body {
@@ -73,4 +73,14 @@ h5 {
 	font-weight: bold;
 	text-align: center;
 	padding-top:20px;
+}
+
+.row_adresses {
+	text-align: center;
+}
+
+#h1_addresses {
+	text-align: center;
+	color: green;
+	padding-bottom: 20px;
 }

@@ -15,7 +15,7 @@
 
 <header>
 		<div class="header_hero">
-			<div class="hero_text"> Find us </div>
+			<div class="hero_text"> Where we live </div>
 		</div>
 
 	<nav class="navbar navbar-expand navbar-light">

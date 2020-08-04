@@ -22,22 +22,34 @@ nav {
 	color: green;
 }
 
-.card-deck {
-	border-visibility: hide;
+main {
+	background-color: rgb(255,255,171);
 }
+
+.container {
+	background: rgb(255,255,171);
+	margin-left: 0px;
+	margin-right: 0px;
+}
+
+.card-body {
+	background-color: rgb(255,255,171);
+}
+
 
 .card-img-top {
 	width: 150px;
 	height: 300px;
 }
 
+
 .card img {
 	width: 70%;
+
 }
 
-
 #main_row {
-	justify-content: center
+	justify-content: center;
 }
 
 

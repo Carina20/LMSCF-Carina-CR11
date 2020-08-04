@@ -42,7 +42,7 @@
 
 	</header>
 
-
+<main>
 
   <div class="container">
 
@@ -55,7 +55,8 @@
   <?php
 
       $db = mysqli_connect("localhost","root","","cr11_carina_petadoption"); 
-      $sql = "SELECT image, name, description, age, hobbies FROM animal";
+      $sql = "SELECT image, name, description, age, hobbies, city FROM animal
+      INNER JOIN location on fk_location_id = location_id";
       $result = $db->query($sql);
       while ($row=mysqli_fetch_assoc($result)) {
 
@@ -70,7 +71,7 @@
         <p class="card-text">'; printf ($row["description"]); echo '</p>
         <p class="card-text age">'; printf ("<span style='color: green;'>Age:</span> %s", $row["age"]); echo '</p>
         <p class="card-text hobbies">'; printf ("<span style='color: green;'> Hobbies:</span> %s", $row["hobbies"]); echo '</p>
-        
+        <p class="card-text location">'; printf ("<span style='color: green;'> Location:</span> %s", $row["city"]); echo '</p>
       </div>
          </div>
          </div>';
@@ -84,7 +85,7 @@
      </div>   <!--------------  end of container -------------------------->
 
      
-
+</main>
  <footer>
 
   <div id="footer_div1">

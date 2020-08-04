@@ -37,14 +37,10 @@ main {
 }
 
 
-.card-img-top {
-	width: 150px;
+img {
+	width: 400px;
 	height: 300px;
-}
-
-
-.card img {
-	width: 70%;
+	padding-left: 30px;
 
 }
 

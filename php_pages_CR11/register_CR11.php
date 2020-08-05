@@ -149,10 +149,10 @@ $password = hash('sha256' , $pass);
      
 
          
-            <button   type = "submit"   class = "btn btn-block btn-primary"   name = "btn-signup" >Sign Up</button >
+            <button   type = "submit"   class = "btn btn-block btn-success"   name = "btn-signup" >Sign Up</button >
             <hr  />
          
-            <a   href = "index_CR11.php" >Sign in Here...</a>
+            <a  id="link_SignIn" href = "index_CR11.php" >Sign in Here...</a>
    
  
    </form >

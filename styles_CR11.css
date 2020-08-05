@@ -118,5 +118,8 @@ h5 {
 .row2_register {
 	background-color: rgb(51,204,51);
 	height: 100px;
+}
 
+#link_SignIn {
+	color: green;
 }

@@ -62,7 +62,7 @@
 
       $db = mysqli_connect("localhost","root","","cr11_carina_petadoption"); 
       $sql = "SELECT image, name, description, age, hobbies, city FROM animal
-      INNER JOIN location on fk_location_id = location_id WHERE (type = 'small' OR  type = 'large') ";
+      INNER JOIN location on fk_location_id = location_id WHERE (type = 'small' OR type = 'large') ORDER BY type ASC";
       $result = $db->query($sql);
       while ($row=mysqli_fetch_assoc($result)) {
 

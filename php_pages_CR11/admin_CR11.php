@@ -8,7 +8,7 @@ if( !isset($_SESSION['admin' ]) && !isset($_SESSION['user']) ) {
  header("Location: index_CR11.php");
  exit;
 }
-if( !isset($_SESSION['user' ]) ) {
+if( isset($_SESSION['user' ]) ) {
   header("Location: home_CR11.php");
   exit;
 }
@@ -66,6 +66,9 @@ $userRow=mysqli_fetch_array($res, MYSQLI_ASSOC);
        <li class="nav-item">
         <a class="nav-link" style="color: green;" id="addresses" href="addresses_CR11.php"> Adress list </a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" style="color: green;" id="link_insert" href="create_CR11.php"> Add animal</a>
+      </li>
     </ul>
   </div>
 
@@ -104,6 +107,7 @@ $userRow=mysqli_fetch_array($res, MYSQLI_ASSOC);
         <p class="card-text age">'; printf ("<span style='color: green;'>Age:</span> %s", $row["age"]); echo '</p>
         <p class="card-text hobbies">'; printf ("<span style='color: green;'> Hobbies:</span> %s", $row["hobbies"]); echo '</p>
         <p class="card-text location">'; printf ("<span style='color: green;'> Location:</span> %s", $row["city"]); echo '</p>
+        <p class="card-text buttons">'; printf ("<a href='update_CR11.php?name=" .$row['name']."'><button type='button'>Update</button></a><a href='delete_CR11.php?name=" .$row['name']."'><button type='button'>Delete</button></a><br>"); echo '</p>
       </div>
          </div>
          </div>';

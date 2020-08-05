@@ -15,4 +15,84 @@ if( isset($_SESSION['user' ]) ) {
 // select logged-in users details
 $res=mysqli_query($conn, "SELECT * FROM users WHERE userId=".$_SESSION['admin']);
 $userRow=mysqli_fetch_array($res, MYSQLI_ASSOC);
+
+
+if ($_GET['name']) {
+   $name = $_GET['name'];
+
+   $sql = "SELECT * FROM animal WHERE name = '$name' ";
+   $result = mysqli_query($conn,$sql);
+   $data = $result->fetch_assoc();
+
+   $conn->close();
+
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+   <title> Admin_Update records </title>
+
+   <style type= "text/css">
+       fieldset {
+           margin: auto;
+            margin-top: 100px;
+           width: 50% ;
+       }
+
+       table tr th  {
+           padding-top: 20px;
+       }
+   </style>
+
+</head>
+<body>
+
+<fieldset>
+   <legend>Update records</legend>
+
+   <form action="actions/a_updateCR11.php" method= "post">
+       <b><table cellspacing= "3" cellpadding="3"> 
+           <tr>
+               <td>Name</td>
+               <td><input  type="text" name="name" /></td>
+           </tr>    
+           <tr>
+               <td>Age</td>
+               <td><input  type="text" name= "age"  /></td>
+           </tr>
+           <tr>
+               <td>Type</td>
+               <td><input type="text"  name="type" /></td>
+           </tr>
+           <tr>
+               <td>fk_location_id</td>
+               <td><input  type="text" name= "fk_location_id" /></td>
+           </tr>
+           <tr>
+               <td>Description</td>
+               <td><input  type="text" name= "description" /></td>
+           </tr>
+            <tr>
+               <td>Hobbies</td>
+               <td><input  type="text" name= "hobbies"  /></td>
+           </tr>
+           <tr>
+               <td>Image</td>
+               <td><input  type="text" name= "image"  /></td>
+           </tr>
+           <tr>
+               <td><br><button type ="submit">Update</button></td>
+               <td><br><a href= "admin_CR11.php"><button type="button">Back</button></a></td>
+           </tr>
+       </table></b>
+   </form>
+
+</fieldset>
+
+</body>
+</html>
+
+<?php
+}
 ?>

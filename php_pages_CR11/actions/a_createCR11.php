@@ -23,7 +23,7 @@ if ($_POST) {
    $fk_location_id = $_POST[ 'fk_location_id'];
    $description = $_POST[ 'description'];
    $hobbies = $_POST[ 'hobbies'];
-   $image = $_POST ['image'];
+   $image = $_FILES['image'];
 
    $sql = "INSERT INTO animal (name, age, type, fk_location_id, description, hobbies, image) VALUES ('$name', '$age', '$type', '$fk_location_id', '$description', '$hobbies', '$image')";
     if($conn->query($sql) === TRUE) {

@@ -49,7 +49,7 @@ $userRow=mysqli_fetch_array($res, MYSQLI_ASSOC);
            </tr>    
            <tr>
                <td>Age</td>
-               <td><input  type="text" name= "age"  /></td>
+               <td><input  type="text" name="age"  /></td>
            </tr>
            <tr>
                <td>Type</td>
@@ -57,11 +57,11 @@ $userRow=mysqli_fetch_array($res, MYSQLI_ASSOC);
            </tr>
            <tr>
                <td>fk_location_id</td>
-               <td><input  type="text" name= "fk_location_id" /></td>
+               <td><input  type="text" name="fk_location_id" /></td>
            </tr>
            <tr>
                <td>Description</td>
-               <td><input  type="text" name= "description" /></td>
+               <td><input  type="text" name="description" /></td>
            </tr>
             <tr>
                <td>Hobbies</td>
@@ -69,7 +69,7 @@ $userRow=mysqli_fetch_array($res, MYSQLI_ASSOC);
            </tr>
            <tr>
                <td>Image</td>
-               <td><input  type="text" name= "image"  /></td>
+               <td><input  type="file" name="image" enctype="multipart/form-data" /></td>
            </tr>
            <tr>
                <td><br><button type ="submit">Insert</button></td>

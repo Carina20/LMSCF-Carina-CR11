@@ -103,7 +103,7 @@ h5 {
 	background-color: rgb(255,255,171);
 }
 
-#h1_register {
+#h2_register {
 	color: green;
 }
 
@@ -113,6 +113,7 @@ h5 {
 
 .row_register {
 	height: 400px;
+	padding-top:20px;
 }
 
 .row2_register {
@@ -130,6 +131,7 @@ h5 {
 
 .row_login {
 	height: 400px;
+	padding-top:20px;
 }
 
 #h2_SignIn {

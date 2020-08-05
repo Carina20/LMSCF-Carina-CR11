@@ -107,7 +107,7 @@ $password = hash('sha256' , $pass);
 
   <div class ="row row_register">
 
-  <h1 id=h1_register> Register for Adopt a pet here </h1>
+  <h2 id=h2_register> Register for Adopt a pet here </h2>
    <form id="register_form" method="post"  action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>"  autocomplete="off" >
  
      

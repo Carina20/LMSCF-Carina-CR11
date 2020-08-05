@@ -155,7 +155,7 @@ $password = hash('sha256' , $pass);
             <a  id="link_SignIn" href = "index_CR11.php" >Sign in Here...</a>
    
  
-   </form >
+   </form>
 
  </div> <!---------------end of row row_register----------->
 

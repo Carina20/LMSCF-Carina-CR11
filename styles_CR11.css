@@ -98,3 +98,25 @@ h5 {
 	color: green;
 	padding-bottom: 20px;
 }
+
+.container_register {
+	background-color: rgb(255,255,171);
+}
+
+#h1_register {
+	color: green;
+}
+
+#register_form {
+	padding-top:50px;
+}
+
+.row_register {
+	height: 400px;
+}
+
+.row2_register {
+	background-color: rgb(51,204,51);
+	height: 100px;
+
+}

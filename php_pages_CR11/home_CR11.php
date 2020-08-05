@@ -1,3 +1,19 @@
+<?php
+ob_start();
+session_start();
+require_once 'dbconnectNewCR11.php';
+
+// if session is not set this will redirect to login page
+if( !isset($_SESSION['user' ]) ) {
+ header("Location: index_CR11.php");
+ exit;
+}
+// select logged-in users details
+$res=mysqli_query($conn, "SELECT * FROM users WHERE userId=".$_SESSION['user']);
+$userRow=mysqli_fetch_array($res, MYSQLI_ASSOC);
+?>
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,13 +24,19 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-	<title>Adopt a pet</title>
+	<title>Welcome - <?php echo $userRow['userName' ]; ?></title>
 </head>
 
 <body>
 
 <header>
+	
 		<div class="header_hero">
+			<div class="row">
+				<div class="col-sm-12">
+					<div id="Welcome_field"> Hi, <?php echo $userRow['userName' ]; ?></div> <div><a id="Signout_field" href="logout_CR11.php?logout">Sign Out</a></div>
+				</div>
+			</div>
 			<div class="hero_text"> All our animals </div>
 		</div>
 
@@ -48,6 +70,7 @@
 	</header>
 
 <main>
+
 
   <div class="container">
 
@@ -108,3 +131,4 @@
 
 </body>
 </html>
+<?php ob_end_flush(); ?>

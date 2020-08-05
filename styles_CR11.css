@@ -1,5 +1,19 @@
+#Welcome_field {
+	color: rgb(255,255,204);
+	float: left;
+	margin-left:10px;
+	font-size: 14pt;
+}
+
+#Signout_field {
+	color: white;
+	position: absolute;
+	right: 20px;
+	font-weight: bold;
+}
+
 .header_hero {
-	height: 100px;
+	height: 120px;
 	background-color:rgb(51,204,51);
 }
 

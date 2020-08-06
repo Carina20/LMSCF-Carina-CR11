@@ -38,7 +38,7 @@
         </div>
       </li>
        <li class="nav-item">
-        <a class="nav-link" style="color: green;" id="addresses" href="addresses_CR11.php"> Adress list </a>
+        <a class="nav-link" style="color: green;" id="addresses" href="addresses_CR11.php"> Address list </a>
       </li>
     </ul>
   </div>
@@ -52,7 +52,7 @@
   <div class="container">
 
 
-<h1 id="h1_addresses"> Adress list </h1>
+<h1 id="h1_addresses"> Address list </h1>
 
 <div id="adress_list">
 

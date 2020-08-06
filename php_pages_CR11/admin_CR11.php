@@ -65,7 +65,7 @@ $userRow=mysqli_fetch_array($res, MYSQLI_ASSOC);
         </div>
       </li>
        <li class="nav-item">
-        <a class="nav-link" style="color: green;" id="addresses" href="addresses_CR11.php"> Adress list </a>
+        <a class="nav-link" style="color: green;" id="addresses" href="addresses_CR11.php"> Address list </a>
       </li>
       <li class="nav-item">
         <a class="nav-link" style="color: green;" id="link_insert" href="create_CR11.php"> Add animal</a>

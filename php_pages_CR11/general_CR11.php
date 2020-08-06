@@ -38,7 +38,7 @@
         </div>
       </li>
        <li class="nav-item">
-        <a class="nav-link" style="color: green;" id="addresses" href="addresses_CR11.php"> Adress list </a>
+        <a class="nav-link" style="color: green;" id="addresses" href="addresses_CR11.php"> Address list </a>
       </li>
     </ul>
   </div>

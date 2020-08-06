@@ -77,6 +77,7 @@ if ($_GET['name']) {
                <td><input  type="number" name= "fk_location_id" value ="<?php echo $data['fk_location_id'] ?>" /></td>
            </tr>
            <tr>
+            <input type= "hidden" name= "name" value= "<?php echo $data['name']?>" />
                <td><br><button type ="submit">Update</button></td>
                <td><br><a href= "admin_CR11.php"><button type="button">Back</button></a></td>
            </tr>

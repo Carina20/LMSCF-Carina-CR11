@@ -29,10 +29,10 @@ if ($_POST) {
    $name = $_POST['name'];
 
 
+
 $sql = "UPDATE animal SET age = '$age', type = '$type', description = '$description', hobbies = '$hobbies', image = '$image', fk_location_id = '$fk_location_id' WHERE name = '$name' " ;
    if($conn->query($sql) === TRUE) {
        echo  "<p>Successfully Updated</p>";
-       echo "<a href='../update_CR11.php'><button type='button'>Back</button></a>";
        echo "<a href='../admin_CR11.php'><button type='button'>Home_admin</button></a>";
    } else {
         echo "Error while updating record : ". $conn->error;

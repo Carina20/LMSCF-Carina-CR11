@@ -53,33 +53,28 @@ if ($_GET['name']) {
 
    <form action="actions/a_updateCR11.php" method= "post">
        <b><table cellspacing= "3" cellpadding="3"> 
-           <tr>
-               <td>Name</td>
-               <td><input  type="text" name="name" /></td>
-           </tr>    
+           
            <tr>
                <td>Age</td>
-               <td><input  type="text" name= "age"  /></td>
+               <td><input  type="number" name= "age" value ="<?php echo $data['age'] ?>" /></td> 
            </tr>
            <tr>
                <td>Type</td>
-               <td><input type="text"  name="type" /></td>
+               <td><input type="text"  name="type" value ="<?php echo $data['type'] ?>" /></td>
            </tr>
            <tr>
                <td>Description</td>
-               <td><input  type="text" name= "description" /></td>
+               <td><input  type="text" name= "description" value ="<?php echo $data['description'] ?>" /></td> 
            </tr>
             <tr>
                <td>Hobbies</td>
-               <td><input  type="text" name= "hobbies"  /></td>
-           </tr>
+               <td><input  type="text" name= "hobbies" value ="<?php echo $data['hobbies'] ?>" /></td>
            <tr>
                <td>Image</td>
-               <td><input  type="text" name= "image"  /></td>
-           </tr>
+               <td><input  type="file" name= "image" /></td>
             <tr>
                <td>fk_location_id</td>
-               <td><input  type="text" name= "fk_location_id" /></td>
+               <td><input  type="number" name= "fk_location_id" value ="<?php echo $data['fk_location_id'] ?>" /></td>
            </tr>
            <tr>
                <td><br><button type ="submit">Update</button></td>

@@ -19,7 +19,6 @@ $res=mysqli_query($conn, "SELECT * FROM users WHERE userId=".$_SESSION['admin'])
 $userRow=mysqli_fetch_array($res, MYSQLI_ASSOC);
 
 if ($_POST) {
-   $name = $_POST['name'];
    $age= $_POST[ 'age'];
    $type= $_POST[ 'type'];
    $description = $_POST['description'];
@@ -27,8 +26,10 @@ if ($_POST) {
    $image= $_POST[ 'image'];
    $fk_location_id= $_POST[ 'fk_location_id'];
 
+   $name = $_POST['name'];
 
-$sql = "UPDATE animal SET name = '$name', age = '$age', type = '$type', description = '$description', hobbies = '$hobbies', image = '$image', fk_location_id = '$fk_location_id' WHERE name = '$name' " ;
+
+$sql = "UPDATE animal SET age = '$age', type = '$type', description = '$description', hobbies = '$hobbies', image = '$image', fk_location_id = '$fk_location_id' WHERE name = '$name' " ;
    if($conn->query($sql) === TRUE) {
        echo  "<p>Successfully Updated</p>";
        echo "<a href='../update_CR11.php'><button type='button'>Back</button></a>";

@@ -66,10 +66,6 @@ if ($_GET['name']) {
                <td><input type="text"  name="type" /></td>
            </tr>
            <tr>
-               <td>fk_location_id</td>
-               <td><input  type="text" name= "fk_location_id" /></td>
-           </tr>
-           <tr>
                <td>Description</td>
                <td><input  type="text" name= "description" /></td>
            </tr>
@@ -80,6 +76,10 @@ if ($_GET['name']) {
            <tr>
                <td>Image</td>
                <td><input  type="text" name= "image"  /></td>
+           </tr>
+            <tr>
+               <td>fk_location_id</td>
+               <td><input  type="text" name= "fk_location_id" /></td>
            </tr>
            <tr>
                <td><br><button type ="submit">Update</button></td>
